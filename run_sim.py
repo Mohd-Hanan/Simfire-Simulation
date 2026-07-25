@@ -1,5 +1,5 @@
 import os
-from simfire.sim.simulation import FireSimulation
+from simfire.sim.simulation import Fire
 from simfire.utils.config import Config
 
 def run_test():

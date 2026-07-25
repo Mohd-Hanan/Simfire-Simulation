@@ -1,0 +1,4 @@
+- cli.data_dir=/content/drive/MyDrive/simharness_data
+- environment=default
+- resources.num_gpus=1
+- rollouts.num_rollout_workers=1
