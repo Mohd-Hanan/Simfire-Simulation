@@ -1,0 +1,130 @@
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pydantic/_internal/_config.py:386: UserWarning: Valid config keys have changed in V2:
+* 'allow_mutation' has been removed
+  warnings.warn(message, UserWarning)
+Authorization required, but no authorization protocol specified
+
+2026-09-20 20:15:41,099	INFO worker.py:1743 -- Started a local Ray instance. View the dashboard at [1m[32m127.0.0.1:8266 [39m[22m
+2026-09-20 20:15:42,280	INFO main.py:313 -- Configuration files for this job can be found at /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-20_20-15-39/hydra_output.
+2026-09-20 20:15:42,284	INFO main.py:206 -- Instantiating environment settings (with partial conversion)...
+2026-09-20 20:15:42,316	INFO main.py:208 -- Instantiating evaluation settings (with partial conversion)...
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:164: UserWarning: [33mWARN: The obs returned by the `reset()` method was expecting numpy array dtype to be float32, actual type: float64[0m
+  logger.warn(
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:188: UserWarning: [33mWARN: The obs returned by the `reset()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+2026-09-20 20:15:42,395	WARNING deprecation.py:50 -- DeprecationWarning: `ignore_worker_failures is deprecated, and will soon be a no-op` has been deprecated. This will raise an error in the future!
+2026-09-20 20:15:42,395	WARNING deprecation.py:50 -- DeprecationWarning: `AlgorithmConfig.rollouts(recreate_failed_workers=..)` has been deprecated. Use `AlgorithmConfig.fault_tolerance(recreate_failed_workers=..)` instead. This will raise an error in the future!
+2026-09-20 20:15:42,395	WARNING deprecation.py:50 -- DeprecationWarning: `AlgorithmConfig.rollouts(restart_failed_sub_environments=..)` has been deprecated. Use `AlgorithmConfig.fault_tolerance(restart_failed_sub_environments=..)` instead. This will raise an error in the future!
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/utils/from_config.py:197: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+`UnifiedLogger` will be removed in Ray 2.7.
+  object_ = constructor(*ctor_args, **ctor_kwargs)
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `JsonLogger interface is deprecated in favor of the `ray.tune.json.JsonLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `CSVLogger interface is deprecated in favor of the `ray.tune.csv.CSVLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `TBXLogger interface is deprecated in favor of the `ray.tune.tensorboardx.TBXLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+Authorization required, but no authorization protocol specified
+
+2026-09-20 20:15:43,087	INFO harness.py:50 -- Harness in evaluation mode: False
+2026-09-20 20:15:43,873	WARNING env.py:162 -- Your env doesn't have a .spec.max_episode_steps attribute. Your horizon will default to infinity, and your environment will not be reset.
+2026-09-20 20:16:10,056	INFO policy.py:1272 -- Policy (worker=local) running on CPU.
+2026-09-20 20:16:10,056	INFO torch_policy_v2.py:111 -- Found 1 visible cuda devices.
+2026-09-20 20:16:11,306	INFO util.py:118 -- Using connectors:
+2026-09-20 20:16:11,306	INFO util.py:119 --     AgentConnectorPipeline
+        ObsPreprocessorConnector
+        StateBufferConnector
+        ViewRequirementAgentConnector
+2026-09-20 20:16:11,307	INFO util.py:120 --     ActionConnectorPipeline
+        ConvertToNumpyConnector
+        NormalizeActionsConnector
+        ImmutableActionsConnector
+2026-09-20 20:16:11,307	INFO rollout_worker.py:1758 -- Built policy map: <PolicyMap lru-caching-capacity=100 policy-IDs=['default_policy']>
+2026-09-20 20:16:11,307	INFO rollout_worker.py:1759 -- Built preprocessor map: {'default_policy': None}
+2026-09-20 20:16:11,307	INFO rollout_worker.py:560 -- Built filter map: defaultdict(<class 'ray.rllib.utils.filter.NoFilter'>, {})
+2026-09-20 20:16:11,899	INFO harness.py:50 -- Harness in evaluation mode: True
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-09-20 20:16:37,387	INFO policy.py:1272 -- Policy (worker=local) running on CPU.
+2026-09-20 20:16:37,387	INFO torch_policy_v2.py:111 -- Found 1 visible cuda devices.
+2026-09-20 20:16:37,423	INFO util.py:118 -- Using connectors:
+2026-09-20 20:16:37,424	INFO util.py:119 --     AgentConnectorPipeline
+        ObsPreprocessorConnector
+        StateBufferConnector
+        ViewRequirementAgentConnector
+2026-09-20 20:16:37,424	INFO util.py:120 --     ActionConnectorPipeline
+        ConvertToNumpyConnector
+        NormalizeActionsConnector
+        ImmutableActionsConnector
+2026-09-20 20:16:37,424	INFO rollout_worker.py:1758 -- Built policy map: <PolicyMap lru-caching-capacity=100 policy-IDs=['default_policy']>
+2026-09-20 20:16:37,424	INFO rollout_worker.py:1759 -- Built preprocessor map: {'default_policy': None}
+2026-09-20 20:16:37,424	INFO rollout_worker.py:560 -- Built filter map: defaultdict(<class 'ray.rllib.utils.filter.NoFilter'>, {})
+2026-09-20 20:16:37,424	INFO trainable.py:164 -- Trainable.setup took 55.012 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2026-09-20 20:16:37,424	WARNING util.py:62 -- Install gputil for GPU system monitoring.
+2026-09-20 20:16:37,425	INFO main.py:335 -- Creating an algorithm instance from /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-20_20-02-46/checkpoints/checkpoint_5.
+2026-09-20 20:16:37,491	INFO trainable.py:575 -- Restored on 127.0.0.1 from checkpoint: Checkpoint(filesystem=local, path=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-20_20-02-46/checkpoints/checkpoint_5)
+2026-09-20 20:16:37,492	INFO main.py:341 -- Evaluating model on simharness2.environments.DamageAwareReactiveHarness.
+2026-09-20 20:16:37,494	INFO render_env.py:276 -- Incrementing evaluation iterations...
+2026-09-20 20:16:37,494	INFO harness.py:129 -- Setting initial value of `self.num_eval_iters` to -1.
+2026-09-20 20:16:37,494	INFO render_env.py:285 -- Current evaluation iteration set to: 0
+2026-09-20 20:16:37,494	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+2026-09-20 20:16:37,494	INFO rollout_worker.py:688 -- Generating sample batch of size 1
+2026-09-20 20:16:45,692	INFO render_env.py:151 -- Current evaluation iteration: 0
+2026-09-20 20:16:45,692	INFO render_env.py:129 -- Preparing to render evaluation environment (w: 0, v: 0)...
+2026-09-20 20:16:45,692	INFO fire_harness.py:573 -- Updating the `self.sim.config` with new `Config` object...
+2026-09-20 20:16:46,461	INFO fire_harness.py:577 -- Resetting `self.sim` to configure rendering == True.
+Error executing job with overrides: ['cli.data_dir=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data']
+Traceback (most recent call last):
+  File "/home/hari/PycharmProjects/Simfire-Simulation/simharness/main.py", line 353, in <module>
+    main()
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/hydra/core/utils.py", line 263, in return_value
+    raise self._return_value
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/hydra/core/utils.py", line 189, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/home/hari/PycharmProjects/Simfire-Simulation/simharness/main.py", line 342, in main
+    evaluate(algo, cfg)
+  File "/home/hari/PycharmProjects/Simfire-Simulation/simharness/main.py", line 136, in evaluate
+    result = algo.evaluate()
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/algorithms/algorithm.py", line 1029, in evaluate
+    batch = self.evaluation_workers.local_worker().sample()
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/evaluation/rollout_worker.py", line 694, in sample
+    batches = [self.input_reader.next()]
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/evaluation/sampler.py", line 91, in next
+    batches = [self.get_data()]
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/evaluation/sampler.py", line 273, in get_data
+    item = next(self._env_runner)
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 348, in run
+    outputs = self.step()
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 404, in step
+    self._base_env.send_actions(actions_to_send)
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/env/vector_env.py", line 459, in send_actions
+    ) = self.vector_env.vector_step(action_vector)
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/env/vector_env.py", line 355, in vector_step
+    raise e
+  File "/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/env/vector_env.py", line 348, in vector_step
+    results = self.envs[i].step(actions[i])
+  File "/home/hari/PycharmProjects/Simfire-Simulation/simharness/simharness2/environments/fire_harness.py", line 188, in step
+    reward = self.reward_cls.get_reward(
+  File "/home/hari/PycharmProjects/Simfire-Simulation/simharness/simharness2/rewards/base_reward.py", line 121, in get_reward
+    bench_total_damaged = self.harness_analytics.benchmark_sim_analytics.data.damaged[
+IndexError: list index out of range
