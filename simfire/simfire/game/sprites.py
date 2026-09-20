@@ -277,9 +277,9 @@ class FireLine(pygame.sprite.Sprite):
             self.rect = pygame.Rect(*(pos + (size, size)))
         else:
             fireline_color = np.zeros((self.size, self.size, 3))
-            fireline_color[:, :, 0] = 255  # R
-            fireline_color[:, :, 1] = 0  # G
-            fireline_color[:, :, 2] = 0  # B
+            fireline_color[:, :, 0] = 160  # R
+            fireline_color[:, :, 1] = 82  # G
+            fireline_color[:, :, 2] = 45  # B
             self.image = pygame.surfarray.make_surface(fireline_color)
 
             self.rect = self.image.get_rect()
@@ -321,9 +321,9 @@ class ScratchLine(pygame.sprite.Sprite):
             self.rect = pygame.Rect(*(pos + (size, size)))
         else:
             scratchline_color = np.zeros((self.size, self.size, 3))
-            scratchline_color[:, :, 0] = 255  # R
-            scratchline_color[:, :, 1] = 0  # G
-            scratchline_color[:, :, 2] = 0  # B
+            scratchline_color[:, :, 0] = 160  # R
+            scratchline_color[:, :, 1] = 82  # G
+            scratchline_color[:, :, 2] = 45  # B
             self.image = pygame.surfarray.make_surface(scratchline_color)
 
             self.rect = self.image.get_rect()
