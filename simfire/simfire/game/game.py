@@ -82,7 +82,7 @@ class Game:
             pygame.display.set_caption("SimFire")
             with resources.path("simfire.utils.assets", "fireline_logo.png") as path:
                 fireline_logo_path = path
-            pygame.display.set_icon(load_image(str(fireline_logo_path)))
+            #pygame.display.set_icon(load_image(str(fireline_logo_path)))
             # pygame returns as w, h
             self.background = pygame.Surface(self.screen.get_size())
             self.background = self.background.convert()

@@ -1,4 +1,5 @@
 in_evaluation: false
+benchmark_sim_init_cfg: ${.sim_init_cfg}
 sim_init_cfg:
   simfire_cls:
     _target_: hydra.utils.get_class
@@ -26,7 +27,7 @@ harness_analytics_partial:
 reward_init_cfg:
   reward_cls:
     _target_: hydra.utils.get_class
-    path: simharness2.rewards.base_reward.SimpleReward
+    path: simharness2.rewards.base_reward.AreaSavedPropReward
   kwargs: null
     # fixed_reward: 100
     # static_penalty: 50

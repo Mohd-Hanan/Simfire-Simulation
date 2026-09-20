@@ -1127,13 +1127,14 @@ class DamageAwareReactiveHarness(ReactiveHarness[AnyFireSimulation]):
 
                 curr_step = self.harness_analytics.benchmark_sim_analytics.num_sim_steps
                 # Store the bench fire map at the sim step
-                if curr_step < self._max_bench_length - 1:
-                    self._bench_firemaps[curr_step - 1] = np.copy(
-                        self.benchmark_sim.fire_map
-                    )
-                else:
-                    self._bench_firemaps.append(np.copy(self.benchmark_sim.fire_map))
-                    self._max_bench_length += 1
+                if "bench_fire_map" in self.attributes:
+                    if curr_step < self._max_bench_length - 1:
+                        self._bench_firemaps[curr_step - 1] = np.copy(
+                            self.benchmark_sim.fire_map
+                        )
+                    else:
+                        self._bench_firemaps.append(np.copy(self.benchmark_sim.fire_map))
+                        self._max_bench_length += 1
 
             timesteps += 1
 

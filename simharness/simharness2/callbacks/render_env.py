@@ -136,6 +136,9 @@ class RenderEnv(DefaultCallbacks):
                 env_is_rendering=True,
                 reset_benchmark=env._new_fire_scenario,
             )
+            if hasattr(env, "_run_benchmark"):
+                env.benchmark_sim.reset()
+                env._run_benchmark()
 
     def should_render_env(
         self, env: "FireHarness[FireSimulation]", env_type: str
