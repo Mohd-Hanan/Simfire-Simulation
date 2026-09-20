@@ -1,0 +1,108 @@
+area:
+  screen_size:
+    _target_: builtins.tuple
+    _args_: [["${simulation.screen_height}", "${simulation.screen_width}"]]
+  pixel_scale: 50
+
+display:
+  fire_size: 1
+  control_line_size: 3
+  agent_size: 4
+  rescale_factor: 6
+
+simulation:
+  update_rate: 1
+  runtime: 15hr
+  headless: true
+  record: true
+  save_data: false
+  draw_spread_graph: false
+  data_type: "npy"
+  # NOTE: Below path isn't used to save gifs; we specify `save_path` via `save_gif(path)`
+  sf_home: /home/hanan/Documents/rl_project/simfire
+
+mitigation:
+  ros_attenuation: false
+
+operational:
+  seed:
+  latitude: 38.422 # top left corner
+  longitude: -118.266 # top left corner
+  height: ${operational_screen_size:${simulation.screen_height}}
+  width: ${operational_screen_size:${simulation.screen_width}}
+  resolution: 30
+  year: 2020
+
+terrain:
+  topography:
+    type: functional
+    functional:
+      function: perlin
+      perlin:
+        octaves: 3
+        persistence: 0.7
+        lacunarity: 2.0
+        seed: 827
+        range_min: 100.0
+        range_max: 2000.0
+      gaussian:
+        amplitude: 500
+        mu_x: 50
+        mu_y: 50
+        sigma_x: 50
+        sigma_y: 50
+  fuel:
+    type: functional
+    functional:
+      function: chaparral
+      chaparral:
+        seed: 1113
+
+fire:
+  fire_initial_position:
+    type: static
+    static:
+      position:
+        _target_: builtins.tuple
+        # NOTE: This will initialize the fire at the top left corner of screen
+        _args_: [[
+          122, # x position
+          122 # y position
+        ]]
+  max_fire_duration: 10
+  diagonal_spread: true
+
+environment:
+  moisture: 0.001
+
+wind:
+  function: simple  # ${simulation.wind.function}
+  cfd:
+    time_to_train: 1000
+    iterations: 1
+    scale: 1
+    timestep_dt: 1.0
+    diffusion: 0.0
+    viscosity: 0.0000001
+    speed: 19
+    direction: north
+  simple:
+    speed: 5
+    direction: 135.0
+  perlin:
+    speed:
+      seed: 2345
+      scale: 400
+      octaves: 3
+      persistence: 0.7
+      lacunarity: 2.0
+      range_min: 7
+      range_max: 47
+    direction:
+      seed: 650
+      scale: 1500
+      octaves: 2
+      persistence: 0.9
+      lacunarity: 1.0
+      range_min: 0.0
+      range_max: 360.0

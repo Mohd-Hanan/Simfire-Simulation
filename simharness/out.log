@@ -1,0 +1,96 @@
+/home/hanan/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+/home/hanan/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pydantic/_internal/_config.py:386: UserWarning: Valid config keys have changed in V2:
+* 'allow_mutation' has been removed
+  warnings.warn(message, UserWarning)
+Authorization required, but no authorization protocol specified
+
+2026-07-23 17:03:45,186	INFO worker.py:1743 -- Started a local Ray instance. View the dashboard at [1m[32m127.0.0.1:8265 [39m[22m
+2026-07-23 17:03:47,150	INFO main.py:312 -- Configuration files for this job can be found at ??/simharness/experiments/2026-07-23_17-03-41/hydra_output.
+2026-07-23 17:03:47,159	INFO main.py:206 -- Instantiating environment settings (with partial conversion)...
+2026-07-23 17:03:47,229	INFO main.py:208 -- Instantiating evaluation settings (with partial conversion)...
+/home/hanan/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+/home/hanan/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:164: UserWarning: [33mWARN: The obs returned by the `reset()` method was expecting numpy array dtype to be float32, actual type: float64[0m
+  logger.warn(
+/home/hanan/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:188: UserWarning: [33mWARN: The obs returned by the `reset()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+2026-07-23 17:03:47,423	WARNING deprecation.py:50 -- DeprecationWarning: `ignore_worker_failures is deprecated, and will soon be a no-op` has been deprecated. This will raise an error in the future!
+2026-07-23 17:03:47,423	WARNING deprecation.py:50 -- DeprecationWarning: `AlgorithmConfig.rollouts(recreate_failed_workers=..)` has been deprecated. Use `AlgorithmConfig.fault_tolerance(recreate_failed_workers=..)` instead. This will raise an error in the future!
+2026-07-23 17:03:47,423	WARNING deprecation.py:50 -- DeprecationWarning: `AlgorithmConfig.rollouts(restart_failed_sub_environments=..)` has been deprecated. Use `AlgorithmConfig.fault_tolerance(restart_failed_sub_environments=..)` instead. This will raise an error in the future!
+/home/hanan/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/utils/from_config.py:197: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+`UnifiedLogger` will be removed in Ray 2.7.
+  object_ = constructor(*ctor_args, **ctor_kwargs)
+/home/hanan/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `JsonLogger interface is deprecated in favor of the `ray.tune.json.JsonLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/home/hanan/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `CSVLogger interface is deprecated in favor of the `ray.tune.csv.CSVLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/home/hanan/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `TBXLogger interface is deprecated in favor of the `ray.tune.tensorboardx.TBXLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+Authorization required, but no authorization protocol specified
+
+2026-07-23 17:03:49,185	INFO harness.py:50 -- Harness in evaluation mode: False
+The simulation configuration is not provided. Returning None.
+2026-07-23 17:03:49,192	WARNING env.py:162 -- Your env doesn't have a .spec.max_episode_steps attribute. Your horizon will default to infinity, and your environment will not be reset.
+2026-07-23 17:03:49,484	INFO policy.py:1272 -- Policy (worker=local) running on CPU.
+2026-07-23 17:03:49,484	INFO torch_policy_v2.py:111 -- Found 0 visible cuda devices.
+2026-07-23 17:03:53,551	INFO util.py:118 -- Using connectors:
+2026-07-23 17:03:53,551	INFO util.py:119 --     AgentConnectorPipeline
+        ObsPreprocessorConnector
+        StateBufferConnector
+        ViewRequirementAgentConnector
+2026-07-23 17:03:53,551	INFO util.py:120 --     ActionConnectorPipeline
+        ConvertToNumpyConnector
+        NormalizeActionsConnector
+        ImmutableActionsConnector
+2026-07-23 17:03:53,551	INFO rollout_worker.py:1758 -- Built policy map: <PolicyMap lru-caching-capacity=100 policy-IDs=['default_policy']>
+2026-07-23 17:03:53,551	INFO rollout_worker.py:1759 -- Built preprocessor map: {'default_policy': None}
+2026-07-23 17:03:53,552	INFO rollout_worker.py:560 -- Built filter map: defaultdict(<class 'ray.rllib.utils.filter.NoFilter'>, {})
+2026-07-23 17:03:55,111	INFO harness.py:50 -- Harness in evaluation mode: True
+The simulation configuration is not provided. Returning None.
+/home/hanan/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-07-23 17:03:55,365	INFO policy.py:1272 -- Policy (worker=local) running on CPU.
+2026-07-23 17:03:55,366	INFO torch_policy_v2.py:111 -- Found 0 visible cuda devices.
+2026-07-23 17:03:55,543	INFO util.py:118 -- Using connectors:
+2026-07-23 17:03:55,543	INFO util.py:119 --     AgentConnectorPipeline
+        ObsPreprocessorConnector
+        StateBufferConnector
+        ViewRequirementAgentConnector
+2026-07-23 17:03:55,543	INFO util.py:120 --     ActionConnectorPipeline
+        ConvertToNumpyConnector
+        NormalizeActionsConnector
+        ImmutableActionsConnector
+2026-07-23 17:03:55,543	INFO rollout_worker.py:1758 -- Built policy map: <PolicyMap lru-caching-capacity=100 policy-IDs=['default_policy']>
+2026-07-23 17:03:55,543	INFO rollout_worker.py:1759 -- Built preprocessor map: {'default_policy': None}
+2026-07-23 17:03:55,544	INFO rollout_worker.py:560 -- Built filter map: defaultdict(<class 'ray.rllib.utils.filter.NoFilter'>, {})
+2026-07-23 17:03:55,544	WARNING util.py:62 -- Install gputil for GPU system monitoring.
+2026-07-23 17:03:55,545	INFO main.py:334 -- Creating an algorithm instance from /home/hanan/Documents/rl_project/simharness_data/simharness/experiments/2026-07-23_04-53-40/checkpoints/checkpoint_0.
+2026-07-23 17:03:55,746	INFO trainable.py:575 -- Restored on 127.0.0.1 from checkpoint: Checkpoint(filesystem=local, path=/home/hanan/Documents/rl_project/simharness_data/simharness/experiments/2026-07-23_04-53-40/checkpoints/checkpoint_0)
+2026-07-23 17:03:55,747	INFO main.py:340 -- Evaluating model on simharness2.environments.ReactiveHarness.
+2026-07-23 17:03:55,753	INFO render_env.py:276 -- Incrementing evaluation iterations...
+2026-07-23 17:03:55,753	INFO harness.py:129 -- Setting initial value of `self.num_eval_iters` to -1.
+2026-07-23 17:03:55,753	INFO render_env.py:285 -- Current evaluation iteration set to: 0
+2026-07-23 17:03:55,753	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+2026-07-23 17:03:55,753	INFO rollout_worker.py:688 -- Generating sample batch of size 1
+2026-07-23 17:03:55,825	INFO render_env.py:151 -- Current evaluation iteration: 0
+2026-07-23 17:03:55,825	INFO render_env.py:129 -- Preparing to render evaluation environment (w: 0, v: 0)...
+2026-07-23 17:03:55,825	INFO fire_harness.py:573 -- Updating the `self.sim.config` with new `Config` object...
+2026-07-23 17:03:57,753	INFO fire_harness.py:577 -- Resetting `self.sim` to configure rendering == True.
+2026-07-23 17:04:51,983	INFO harness_analytics.py:230 -- Episode 1: BestEpisodePerformance(max_unburned=501, sim_area=16384, num_sim_steps=217, episode=1, reward=1.0)
+2026-07-23 17:05:02,294	INFO render_env.py:234 -- Total environment steps: 1945
+2026-07-23 17:05:02,296	INFO render_env.py:235 -- Saving GIF to ??/simharness/experiments/2026-07-23_17-03-41/evaluation/gifs/functional/fire_init_pos_x_122_y_122/iter_0_time_170502_w_0_v_0.gif...
+2026-07-23 17:05:02,301	INFO simulation.py:852 -- Creating directory '??/simharness/experiments/2026-07-23_17-03-41/evaluation/gifs/functional/fire_init_pos_x_122_y_122'
+2026-07-23 17:05:02,304	INFO simulation.py:855 -- Saving GIF to '??/simharness/experiments/2026-07-23_17-03-41/evaluation/gifs/functional/fire_init_pos_x_122_y_122/iter_0_time_170502_w_0_v_0.gif'...
+2026-07-23 17:05:03,787	INFO simulation.py:860 -- Finished saving GIF
+2026-07-23 17:05:03,834	INFO simulation_analytics.py:144 -- Saving episode history to ??/simharness/experiments/2026-07-23_17-03-41/evaluation/sim_data/iter_0_time_170502_w_0_v_0.csv...
+2026-07-23 17:05:03,920	INFO fire_harness.py:573 -- Updating the `self.sim.config` with new `Config` object...
+2026-07-23 17:05:05,510	INFO fire_harness.py:577 -- Resetting `self.sim` to configure rendering == False.
+2026-07-23 17:05:06,587	INFO render_env.py:151 -- Current evaluation iteration: 0
+2026-07-23 17:05:06,588	INFO render_env.py:129 -- Preparing to render evaluation environment (w: 0, v: 0)...
+2026-07-23 17:05:06,588	INFO fire_harness.py:573 -- Updating the `self.sim.config` with new `Config` object...
+2026-07-23 17:05:07,948	INFO fire_harness.py:577 -- Resetting `self.sim` to configure rendering == True.
+*** SIGTERM received at time=1784806527 on cpu 0 ***

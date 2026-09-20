@@ -1,0 +1,20 @@
+defaults:
+  - train
+  - _self_
+
+cli:
+  mode: eval
+
+algo:
+  checkpoint_path: /home/hanan/Documents/rl_project/simharness_data/simharness/experiments/2026-07-23_04-53-40/checkpoints/checkpoint_0
+  callbacks:
+    - _target_: hydra.utils.get_class
+      path: simharness2.callbacks.RenderEnv
+
+# Force it to run locally without spawning extra heavy background workers
+rollouts:
+  num_rollout_workers: 0
+  num_envs_per_worker: 1
+  compress_observations: true
+evaluation:
+  evaluation_num_workers: 0
