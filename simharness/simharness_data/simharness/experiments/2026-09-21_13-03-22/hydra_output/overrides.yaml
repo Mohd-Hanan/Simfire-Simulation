@@ -1,0 +1,4 @@
+- cli.data_dir=./simharness_data
+- algo.checkpoint_path=
+- simulation.fire_initial_position.sampler=null
+- simulation.simfire.fire.fire_initial_position.static.position._args_=[[75,75]]
