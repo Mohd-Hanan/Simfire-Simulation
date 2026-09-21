@@ -61,6 +61,7 @@ class ReactiveAgent:
     latest_movement: int = None
     latest_interaction: int = None
     mitigation_placed: bool = False
+    extinguished_fire: bool = False
     moved_off_map: bool = False
 
     def __post_init__(self):
@@ -127,6 +128,7 @@ class ReactiveAgent:
         self.latest_movement = None
         self.latest_interaction = None
         self.mitigation_placed = False
+        self.extinguished_fire = False
         self.moved_off_map = False
         self.__post_init__()
         # self.current_position = self.initial_position

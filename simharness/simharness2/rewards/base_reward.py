@@ -86,95 +86,154 @@ class AreaSavedPropReward(BaseReward):
     """
 
     def get_reward(
-        self,
-        *,
-        timestep: int,
-        sim_run: bool,
-        done_episode: bool,
-        agents: Dict[Any, ReactiveAgent],
-        agent_speed: int,
-        **kwargs,
+            self,
+            *,
+            timestep: int,
+            sim_run: bool,
+            done_episode: bool,
+            agents: Dict[Any, ReactiveAgent],
+            agent_speed: int,
+            **kwargs,
     ) -> float:
-        """TODO Add function docstring."""
+        """Calculate the normalized area-saved reward."""
+
+        # For environment steps where the fire simulation does not run,
+        # return the intermediate reward.
         if not sim_run:
             return self.get_timestep_intermediate_reward(
-                timestep=timestep, agents=agents, agent_speed=agent_speed
+                timestep=timestep,
+                agents=agents,
+                agent_speed=agent_speed,
             )
 
-        ## DEFINE VALUES NEEDED FOR REWARD CALCULATION
+        # ============================================================
+        # GET CURRENT SIMULATION VALUES
+        # ============================================================
 
-        # extract the current number of simulation steps in the agent(s) simulation
+        # Current simulation timestep
         sim_steps = self.harness_analytics.sim_analytics.num_sim_steps
 
-        # extract the number of newly damaged squares in the agent(s) simulation
-        sim_new_damaged = self.harness_analytics.sim_analytics.data.new_damaged
+        # Newly damaged area in the agent simulation at this timestep
+        sim_new_damaged = (
+            self.harness_analytics.sim_analytics.data.new_damaged
+        )
 
-        # extract the total number of damaged squares in the agent(s) simulation
-        sim_total_damaged = self.harness_analytics.sim_analytics.data.total_damaged
+        # Total damaged area in the agent simulation
+        sim_total_damaged = (
+            self.harness_analytics.sim_analytics.data.total_damaged
+        )
 
-        # extract the number of simulation steps that occured in the benchmark simulation
+        # Total number of timesteps in the benchmark simulation
         bench_sim_steps_total = len(
             self.harness_analytics.benchmark_sim_analytics.data.damaged
         )
 
-        # extract the total number of damaged squares in the benchmark simulation
-        bench_total_damaged = self.harness_analytics.benchmark_sim_analytics.data.damaged[
-            -1
-        ]
+        # Final total damaged area in the benchmark simulation
+        bench_total_damaged = (
+            self.harness_analytics.benchmark_sim_analytics.data.damaged[-1]
+        )
 
-        # extract the number of newly damaged squares in the benchmark simulation
-        bench_new_damaged = 0
+        # ============================================================
+        # SAFETY CHECK
+        # ============================================================
+
+        # Prevent division by zero if the benchmark has no damaged area.
+        if bench_total_damaged <= 0:
+            reward = 0.0
+            self.latest_reward = reward
+            return reward
+
+        # ============================================================
+        # GET BENCHMARK DAMAGE FOR CURRENT TIMESTEP
+        # ============================================================
+
+        bench_new_damaged = 0.0
+
         if sim_steps == 1:
+            # Damage during the first benchmark simulation step
             bench_new_damaged = (
-                self.harness_analytics.benchmark_sim_analytics.data.damaged[0]
+                self.harness_analytics
+                .benchmark_sim_analytics
+                .data
+                .damaged[0]
             )
+
         elif sim_steps <= bench_sim_steps_total:
+            # Incremental benchmark damage between the previous
+            # and current simulation timestep.
             bench_new_damaged = (
-                self.harness_analytics.benchmark_sim_analytics.data.damaged[
-                    (sim_steps - 1)
-                ]
-                - self.harness_analytics.benchmark_sim_analytics.data.damaged[
-                    (sim_steps - 2)
-                ]
-            )
-        else:
-            bench_new_damaged = 0.0
-
-        ## REWARD CALCULATION
-
-        # calculate the reward as the difference in newly damaged squares between the agent(s) simulation and the benchmark simulation at the given timestep
-
-        if sim_steps <= bench_sim_steps_total:
-            reward = (
-                (bench_new_damaged * 1.0 - sim_new_damaged) / bench_total_damaged * 1.0
+                    self.harness_analytics
+                    .benchmark_sim_analytics
+                    .data
+                    .damaged[sim_steps - 1]
+                    -
+                    self.harness_analytics
+                    .benchmark_sim_analytics
+                    .data
+                    .damaged[sim_steps - 2]
             )
 
         else:
-            # account for when the agent(s) simulation has lasted longer than the benchmark simulation
-
+            # Benchmark simulation has already finished.
             bench_new_damaged = 0.0
-            reward = (
-                (bench_new_damaged * 1.0 - sim_new_damaged) / bench_total_damaged * 1.0
-            )
 
-        # account for if the agent(s) simulation has ended in fewer steps than the benchmark simulation
-        if (self.harness_analytics.sim_analytics.active == False) & (
-            sim_steps < bench_sim_steps_total
+        # ============================================================
+        # NORMAL REWARD
+        # ============================================================
+
+        # Positive reward:
+        #   Agent damaged less area than the benchmark.
+        #
+        # Zero reward:
+        #   Agent damaged the same amount as the benchmark.
+        #
+        # Negative reward:
+        #   Agent damaged more area than the benchmark.
+        #
+        # The result is normalized by the total benchmark damage.
+
+        reward = (
+                         bench_new_damaged - sim_new_damaged
+                 ) / bench_total_damaged
+
+        # ============================================================
+        # EARLY TERMINATION BONUS
+        # ============================================================
+
+        # If the agent simulation finished before the benchmark,
+        # calculate the amount of damage that the benchmark would
+        # have experienced after the agent had already finished.
+        if (
+                not self.harness_analytics.sim_analytics.active
+                and sim_steps < bench_sim_steps_total
         ):
             bench_rest_damaged = (
-                self.harness_analytics.benchmark_sim_analytics.data.damaged[-1]
-                - self.harness_analytics.benchmark_sim_analytics.data.damaged[
-                    (sim_steps - 1)
-                ]
+                    self.harness_analytics
+                    .benchmark_sim_analytics
+                    .data
+                    .damaged[-1]
+                    -
+                    self.harness_analytics
+                    .benchmark_sim_analytics
+                    .data
+                    .damaged[sim_steps - 1]
             )
 
+            # The agent has stopped, so no additional damage is
+            # assumed after termination.
             sim_rest_damaged = 0.0
 
-            reward = reward + (
-                bench_rest_damaged * 1.0 - sim_rest_damaged / bench_total_damaged * 1.0
-            )
+            # IMPORTANT:
+            # Normalize the entire difference by benchmark total damage.
+            # This fixes the previous operator-precedence bug.
+            reward += (
+                              bench_rest_damaged - sim_rest_damaged
+                      ) / bench_total_damaged
 
-        # update self.latest_reward and then return the reward
+        # ============================================================
+        # SAVE AND RETURN REWARD
+        # ============================================================
+
         self.latest_reward = reward
 
         return reward
@@ -187,27 +246,22 @@ class AreaSavedPropReward(BaseReward):
         agent_speed: int,
     ) -> float:
         """Basic Intermediate reward is the last sim step reward
-        + a small amount if the agent successfully places a mitigation and the total squares damaged does not exceed the benchmark sim
+        modified by behavioral shaping components.
         """
-
-        # extract the total number of damaged squares in the benchmark simulation
-        bench_total_damaged = self.harness_analytics.benchmark_sim_analytics.data.damaged[
-            -1
-        ]
-        # extract the total number of damaged squares in the agent(s) simulation
-        sim_total_damaged = self.harness_analytics.sim_analytics.data.total_damaged
-        # calculate the fractional reward partial given for each agent's successful mitigation placement
-        num_agents = len(agents)
-        mitigation_bonus = 1.0 / (num_agents * agent_speed)
-
         reward = self.latest_reward
 
-        # if the total area damaged in the agent(s) simulation is less than the total area damaged in the benchmark simulation
-        if sim_total_damaged < bench_total_damaged:
-            for agent_id, agent in agents.items():
-                if agent.mitigation_placed == True:
-                    # FIXME for multidiscrete action space
-                    reward = reward + (mitigation_bonus / bench_total_damaged)
+        for agent_id, agent in agents.items():
+            # non-none action penalty
+            if agent.latest_interaction != 1:
+                reward -= 0.0001
+            
+            # fireline placement penalty
+            if agent.latest_interaction == 0:
+                reward -= 0.0002
+
+            # successful wetline extinguishing fire
+            if agent.latest_interaction == 2 and getattr(agent, "extinguished_fire", False):
+                reward += 0.0005
 
         return reward
 

@@ -235,9 +235,16 @@ class FireHarness(Harness[AnyFireSimulation]):
         agent.latest_movement, agent.latest_interaction = self._parse_action(action)
 
         interact = self.interactions[agent.latest_interaction] != "none"
-        # Ensure that mitigations are only placed on squares with `UNBURNED` status
-        if self._agent_pos_is_unburned(agent) and interact:
-            # NOTE: `self.mitigation_placed` is updated in `_update_mitigation()`.
+        
+        # Reset extinguished_fire tracking for this step
+        agent.extinguished_fire = False
+
+        # Ensure mitigations are only placed on valid squares
+        if self._agent_pos_is_valid_for_mitigation(agent) and interact:
+            # Track if we are dropping on an active fire
+            if self.sim.fire_map[agent.row, agent.col] == BurnStatus.BURNING:
+                agent.extinguished_fire = True
+                
             self._update_mitigation(agent)
         else:
             # Overwrite value from previous timestep.
@@ -260,9 +267,10 @@ class FireHarness(Harness[AnyFireSimulation]):
         else:
             raise NotImplementedError(f"{self.action_space} is not supported.")
 
-    def _agent_pos_is_unburned(self, agent: ReactiveAgent) -> bool:
-        """Returns true if the space occupied by the agent has `BurnStatus.UNBURNED`."""
-        return self.sim.fire_map[agent.row, agent.col] == BurnStatus.UNBURNED
+    def _agent_pos_is_valid_for_mitigation(self, agent: ReactiveAgent) -> bool:
+        """Returns true if the space occupied by the agent is valid for mitigation."""
+        pos = self.sim.fire_map[agent.row, agent.col]
+        return pos == BurnStatus.UNBURNED or pos == BurnStatus.BURNING
 
     def _update_mitigation(self, agent: ReactiveAgent) -> None:
         """Interact with the environment by performing the provided interaction."""
