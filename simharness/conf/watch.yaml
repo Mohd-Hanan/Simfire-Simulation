@@ -6,7 +6,7 @@ cli:
   mode: eval
 
 algo:
-  checkpoint_path: /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-20_21-00-23/checkpoints/checkpoint_95
+  checkpoint_path: ../simharness_data/simharness/experiments/2026-09-20_21-00-23/checkpoints/checkpoint_95
   callbacks:
     - _target_: hydra.utils.get_class
       path: simharness2.callbacks.RenderEnv
