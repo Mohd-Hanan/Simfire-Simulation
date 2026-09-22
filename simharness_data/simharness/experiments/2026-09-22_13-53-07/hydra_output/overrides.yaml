@@ -1,0 +1,6 @@
+- cli.data_dir=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data
+- algo.checkpoint_path=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-21_06-56-05/checkpoints/checkpoint_400
+- evaluation.evaluation_duration=5
+- simulation.screen_height=128
+- simulation.screen_width=128
+- training/model=screen_size_128
