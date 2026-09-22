@@ -1,0 +1,5 @@
+- cli.data_dir=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data
+- algo.checkpoint_path=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-21_16-42-43/checkpoints/checkpoint_2
+- simulation.simfire.simulation.headless=false
+- simulation.fire_initial_position.sampler=null
+- simulation.simfire.fire.fire_initial_position.static.position._args_=[[50,50]]

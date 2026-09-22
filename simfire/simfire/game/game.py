@@ -406,5 +406,6 @@ class Game:
                     self.screen.blit(wind_dir_surf, (0, 0))
 
                 pygame.display.update()
+                pygame.time.wait(200)
 
         return status

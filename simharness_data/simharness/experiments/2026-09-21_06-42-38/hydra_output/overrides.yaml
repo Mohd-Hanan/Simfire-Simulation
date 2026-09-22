@@ -1,0 +1,4 @@
+- cli.data_dir=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data
+- algo.checkpoint_path=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-20_23-32-12/checkpoints/checkpoint_540
+- evaluation.evaluation_duration=8
+- simulation.fire_initial_position.sampler.sample_size.eval=8

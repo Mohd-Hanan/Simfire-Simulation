@@ -1,0 +1,2 @@
+- cli.data_dir=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data
+- algo.checkpoint_path=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-20_23-32-12/checkpoints/checkpoint_540

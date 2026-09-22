@@ -1,0 +1,6 @@
+- cli.data_dir=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data
+- checkpoint.checkpoint_frequency=20
+- stop_conditions.training_iteration=5
+- rollouts.num_rollout_workers=2
+- resources.num_gpus=1
+- algo.checkpoint_path=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-21_16-28-19/checkpoints/checkpoint_0

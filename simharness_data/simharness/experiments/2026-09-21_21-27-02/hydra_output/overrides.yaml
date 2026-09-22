@@ -1,0 +1,5 @@
+- cli.data_dir=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data
+- checkpoint.checkpoint_frequency=1
+- stop_conditions.training_iteration=5
+- rollouts.num_rollout_workers=2
+- resources.num_gpus=1
