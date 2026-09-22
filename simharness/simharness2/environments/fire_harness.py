@@ -1090,6 +1090,27 @@ class DamageAwareReactiveHarness(ReactiveHarness[AnyFireSimulation]):
                 (self.harness_analytics.benchmark_sim_analytics.num_sim_steps) - 1
             ]
 
+    def get_observation_space(self) -> spaces.Space:
+        super().get_observation_space()
+        obs_shape = (
+            self.sim.fire_map.shape[0],
+            self.sim.fire_map.shape[1],
+            len(self.attributes),
+        )
+        low = np.zeros(obs_shape, dtype=np.float32)
+        high = np.ones(obs_shape, dtype=np.float32)
+        return spaces.Box(low=low, high=high, dtype=np.float32)
+
+    def _normalize_obs(self, obs: np.ndarray) -> np.ndarray:
+        if not hasattr(self, '_channel_lows'):
+            self.get_observation_space()
+        norm_obs = (obs - self._channel_lows) / (self._channel_highs - self._channel_lows + 1e-8)
+        return norm_obs.astype(np.float32)
+
+    def step(self, action: np.ndarray):
+        obs, reward, terminated, truncated, info = super().step(action)
+        return self._normalize_obs(obs), reward, terminated, truncated, info
+
     def reset(
         self,
         *,
@@ -1107,7 +1128,7 @@ class DamageAwareReactiveHarness(ReactiveHarness[AnyFireSimulation]):
         # This is somewhat tricky - must ensure that analytics.data is NOT reset!
         self._run_benchmark()
 
-        return self.state, {}
+        return self._normalize_obs(self.state), {}
 
     def _run_benchmark(self):
         """Run the entire benchmark sim and store the data needed for the rewards and bench fire maps within each episode."""

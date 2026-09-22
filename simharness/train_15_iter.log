@@ -1,0 +1,226 @@
+Running command: conda run -n simfire_env env RAY_memory_monitor_refresh_ms=0 python main.py --config-name train cli.data_dir=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data checkpoint.checkpoint_frequency=5 stop_conditions.training_iteration=15 rollouts.num_rollout_workers=2 resources.num_gpus=1 algo.checkpoint_path=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_00-05-26/checkpoints/checkpoint_0
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pydantic/_internal/_config.py:386: UserWarning: Valid config keys have changed in V2:
+* 'allow_mutation' has been removed
+  warnings.warn(message, UserWarning)
+Authorization required, but no authorization protocol specified
+
+2026-09-22 00:11:01,143	INFO worker.py:1743 -- Started a local Ray instance. View the dashboard at [1m[32m127.0.0.1:8265 [39m[22m
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:164: UserWarning: [33mWARN: The obs returned by the `reset()` method was expecting numpy array dtype to be float32, actual type: float64[0m
+  logger.warn(
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:188: UserWarning: [33mWARN: The obs returned by the `reset()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+2026-09-22 00:11:02,546	WARNING deprecation.py:50 -- DeprecationWarning: `ignore_worker_failures is deprecated, and will soon be a no-op` has been deprecated. This will raise an error in the future!
+2026-09-22 00:11:02,547	WARNING deprecation.py:50 -- DeprecationWarning: `AlgorithmConfig.rollouts(recreate_failed_workers=..)` has been deprecated. Use `AlgorithmConfig.fault_tolerance(recreate_failed_workers=..)` instead. This will raise an error in the future!
+2026-09-22 00:11:02,547	WARNING deprecation.py:50 -- DeprecationWarning: `AlgorithmConfig.rollouts(restart_failed_sub_environments=..)` has been deprecated. Use `AlgorithmConfig.fault_tolerance(restart_failed_sub_environments=..)` instead. This will raise an error in the future!
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/utils/from_config.py:197: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+`UnifiedLogger` will be removed in Ray 2.7.
+  object_ = constructor(*ctor_args, **ctor_kwargs)
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `JsonLogger interface is deprecated in favor of the `ray.tune.json.JsonLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `CSVLogger interface is deprecated in favor of the `ray.tune.csv.CSVLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `TBXLogger interface is deprecated in favor of the `ray.tune.tensorboardx.TBXLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+[36m(RolloutWorker pid=1098)[0m /home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[36m(RolloutWorker pid=1098)[0m   from pkg_resources import resource_stream, resource_exists
+[36m(RolloutWorker pid=1098)[0m /home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pydantic/_internal/_config.py:386: UserWarning: Valid config keys have changed in V2:
+[36m(RolloutWorker pid=1098)[0m * 'allow_mutation' has been removed
+[36m(RolloutWorker pid=1098)[0m   warnings.warn(message, UserWarning)
+[36m(RolloutWorker pid=1098)[0m Authorization required, but no authorization protocol specified
+[36m(RolloutWorker pid=1098)[0m 
+[36m(RolloutWorker pid=1098)[0m /home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+[36m(RolloutWorker pid=1098)[0m   gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+[36m(RolloutWorker pid=1098)[0m 2026-09-22 00:11:06,523	WARNING env.py:162 -- Your env doesn't have a .spec.max_episode_steps attribute. Your horizon will default to infinity, and your environment will not be reset.
+[36m(RolloutWorker pid=1098)[0m 2026-09-22 00:11:06,579	INFO policy.py:1272 -- Policy (worker=1) running on CPU.
+[36m(RolloutWorker pid=1098)[0m 2026-09-22 00:11:06,579	INFO torch_policy_v2.py:111 -- Found 0 visible cuda devices.
+[36m(RolloutWorker pid=1098)[0m 2026-09-22 00:11:07,453	INFO util.py:118 -- Using connectors:
+[36m(RolloutWorker pid=1098)[0m 2026-09-22 00:11:07,453	INFO util.py:119 --     AgentConnectorPipeline
+[36m(RolloutWorker pid=1098)[0m         ObsPreprocessorConnector
+[36m(RolloutWorker pid=1098)[0m         StateBufferConnector
+[36m(RolloutWorker pid=1098)[0m         ViewRequirementAgentConnector
+[36m(RolloutWorker pid=1098)[0m 2026-09-22 00:11:07,454	INFO util.py:120 --     ActionConnectorPipeline
+[36m(RolloutWorker pid=1098)[0m         ConvertToNumpyConnector
+[36m(RolloutWorker pid=1098)[0m         NormalizeActionsConnector
+[36m(RolloutWorker pid=1098)[0m         ImmutableActionsConnector
+2026-09-22 00:11:07,573	INFO worker_set.py:323 -- Inferred observation/action spaces from remote worker (local worker has no env): {'default_policy': (Box(0.0, 1.0, (32, 32, 6), float32), Discrete(15)), '__env__': (Box(0.0, 1.0, (32, 32, 6), float32), Discrete(15))}
+2026-09-22 00:11:07,617	INFO policy.py:1272 -- Policy (worker=local) running on 1 GPUs.
+2026-09-22 00:11:07,617	INFO torch_policy_v2.py:111 -- Found 1 visible cuda devices.
+2026-09-22 00:11:09,191	INFO util.py:118 -- Using connectors:
+2026-09-22 00:11:09,191	INFO util.py:119 --     AgentConnectorPipeline
+        ObsPreprocessorConnector
+        StateBufferConnector
+        ViewRequirementAgentConnector
+2026-09-22 00:11:09,191	INFO util.py:120 --     ActionConnectorPipeline
+        ConvertToNumpyConnector
+        NormalizeActionsConnector
+        ImmutableActionsConnector
+2026-09-22 00:11:09,191	INFO rollout_worker.py:1758 -- Built policy map: <PolicyMap lru-caching-capacity=100 policy-IDs=['default_policy']>
+2026-09-22 00:11:09,191	INFO rollout_worker.py:1759 -- Built preprocessor map: {'default_policy': None}
+2026-09-22 00:11:09,191	INFO rollout_worker.py:560 -- Built filter map: defaultdict(<class 'ray.rllib.utils.filter.NoFilter'>, {})
+[36m(RolloutWorker pid=1325)[0m /home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.[32m [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(RolloutWorker pid=1325)[0m   from pkg_resources import resource_stream, resource_exists[32m [repeated 2x across cluster][0m
+[36m(RolloutWorker pid=1099)[0m /home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pydantic/_internal/_config.py:386: UserWarning: Valid config keys have changed in V2:
+[36m(RolloutWorker pid=1099)[0m * 'allow_mutation' has been removed
+[36m(RolloutWorker pid=1099)[0m   warnings.warn(message, UserWarning)
+[36m(RolloutWorker pid=1099)[0m Authorization required, but no authorization protocol specified
+[36m(RolloutWorker pid=1099)[0m 
+[36m(RolloutWorker pid=1099)[0m /home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+[36m(RolloutWorker pid=1099)[0m   gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:11:06,677	INFO policy.py:1272 -- Policy (worker=2) running on CPU.
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:11:06,677	INFO torch_policy_v2.py:111 -- Found 0 visible cuda devices.
+[36m(RolloutWorker pid=1325)[0m /home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pydantic/_internal/_config.py:386: UserWarning: Valid config keys have changed in V2:
+[36m(RolloutWorker pid=1325)[0m * 'allow_mutation' has been removed
+[36m(RolloutWorker pid=1325)[0m   warnings.warn(message, UserWarning)
+[36m(RolloutWorker pid=1325)[0m Authorization required, but no authorization protocol specified
+[36m(RolloutWorker pid=1325)[0m 
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:11:07,565	INFO util.py:118 -- Using connectors:
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:11:07,566	INFO util.py:119 --     AgentConnectorPipeline
+[36m(RolloutWorker pid=1099)[0m         ObsPreprocessorConnector
+[36m(RolloutWorker pid=1099)[0m         StateBufferConnector
+[36m(RolloutWorker pid=1099)[0m         ViewRequirementAgentConnector
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:11:07,566	INFO util.py:120 --     ActionConnectorPipeline
+[36m(RolloutWorker pid=1099)[0m         ConvertToNumpyConnector
+[36m(RolloutWorker pid=1099)[0m         NormalizeActionsConnector
+[36m(RolloutWorker pid=1099)[0m         ImmutableActionsConnector
+[36m(RolloutWorker pid=1325)[0m /home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+[36m(RolloutWorker pid=1325)[0m   gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:11:12,967	WARNING env.py:162 -- Your env doesn't have a .spec.max_episode_steps attribute. Your horizon will default to infinity, and your environment will not be reset.
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:11:13,022	INFO policy.py:1272 -- Policy (worker=1) running on CPU.
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:11:13,022	INFO torch_policy_v2.py:111 -- Found 0 visible cuda devices.
+2026-09-22 00:11:13,899	INFO worker_set.py:323 -- Inferred observation/action spaces from remote worker (local worker has no env): {'default_policy': (Box(0.0, 1.0, (32, 32, 6), float32), Discrete(15)), '__env__': (Box(0.0, 1.0, (32, 32, 6), float32), Discrete(15))}
+2026-09-22 00:11:13,915	INFO policy.py:1272 -- Policy (worker=local) running on 1 GPUs.
+2026-09-22 00:11:13,915	INFO torch_policy_v2.py:111 -- Found 1 visible cuda devices.
+2026-09-22 00:11:13,926	INFO util.py:118 -- Using connectors:
+2026-09-22 00:11:13,926	INFO util.py:119 --     AgentConnectorPipeline
+        ObsPreprocessorConnector
+        StateBufferConnector
+        ViewRequirementAgentConnector
+2026-09-22 00:11:13,926	INFO util.py:120 --     ActionConnectorPipeline
+        ConvertToNumpyConnector
+        NormalizeActionsConnector
+        ImmutableActionsConnector
+2026-09-22 00:11:13,926	INFO rollout_worker.py:1758 -- Built policy map: <PolicyMap lru-caching-capacity=100 policy-IDs=['default_policy']>
+2026-09-22 00:11:13,926	INFO rollout_worker.py:1759 -- Built preprocessor map: {'default_policy': None}
+2026-09-22 00:11:13,926	INFO rollout_worker.py:560 -- Built filter map: defaultdict(<class 'ray.rllib.utils.filter.NoFilter'>, {})
+2026-09-22 00:11:13,926	INFO trainable.py:164 -- Trainable.setup took 11.359 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2026-09-22 00:11:13,926	WARNING util.py:62 -- Install gputil for GPU system monitoring.
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:11:13,892	INFO util.py:118 -- Using connectors:
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:11:13,892	INFO util.py:119 --     AgentConnectorPipeline
+[36m(RolloutWorker pid=1325)[0m         ObsPreprocessorConnector
+[36m(RolloutWorker pid=1325)[0m         StateBufferConnector
+[36m(RolloutWorker pid=1325)[0m         ViewRequirementAgentConnector
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:11:13,892	INFO util.py:120 --     ActionConnectorPipeline
+[36m(RolloutWorker pid=1325)[0m         ConvertToNumpyConnector
+[36m(RolloutWorker pid=1325)[0m         NormalizeActionsConnector
+[36m(RolloutWorker pid=1325)[0m         ImmutableActionsConnector
+2026-09-22 00:11:13,993	INFO trainable.py:575 -- Restored on 127.0.0.1 from checkpoint: Checkpoint(filesystem=local, path=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_00-05-26/checkpoints/checkpoint_0)
+[36m(RolloutWorker pid=1098)[0m 2026-09-22 00:11:13,995	INFO rollout_worker.py:688 -- Generating sample batch of size 500
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:11:14,594	INFO harness_analytics.py:230 -- Episode 1: BestEpisodePerformance(max_unburned=993, sim_area=1024, num_sim_steps=13, episode=1, reward=-0.75)
+[36m(RolloutWorker pid=1098)[0m 2026-09-22 00:11:16,962	INFO rollout_worker.py:730 -- Completed sample batch:
+[36m(RolloutWorker pid=1098)[0m { 'count': 500,
+[36m(RolloutWorker pid=1098)[0m   'policy_batches': { 'default_policy': { 'action_dist_inputs': np.ndarray((500, 15), dtype=float32, min=-0.448, max=0.507, mean=0.083),
+[36m(RolloutWorker pid=1098)[0m                                           'action_logp': np.ndarray((500,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[36m(RolloutWorker pid=1098)[0m                                           'actions': np.ndarray((500,), dtype=int32, min=0.0, max=14.0, mean=7.266),
+[36m(RolloutWorker pid=1098)[0m                                           'advantages': np.ndarray((500,), dtype=float32, min=-2.442, max=2.578, mean=-0.035),
+[36m(RolloutWorker pid=1098)[0m                                           'agent_index': np.ndarray((500,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[36m(RolloutWorker pid=1098)[0m                                           'eps_id': np.ndarray((500,), dtype=int64, min=4.940563412385997e+16, max=9.249455293805985e+17, mean=4.402522282746897e+17),
+[36m(RolloutWorker pid=1098)[0m                                           'infos': np.ndarray((500,), dtype=object, head={}),
+[36m(RolloutWorker pid=1098)[0m                                           'new_obs': np.ndarray((500, 32, 32, 6), dtype=float32, min=0.0, max=1.0, mean=0.66),
+[36m(RolloutWorker pid=1098)[0m                                           'obs': np.ndarray((500, 32, 32, 6), dtype=float32, min=0.0, max=1.0, mean=0.66),
+[36m(RolloutWorker pid=1098)[0m                                           'rewards': np.ndarray((500,), dtype=float32, min=-2.0, max=0.0, mean=-0.074),
+[36m(RolloutWorker pid=1098)[0m                                           't': np.ndarray((500,), dtype=int64, min=0.0, max=108.0, mean=51.12),
+[36m(RolloutWorker pid=1098)[0m                                           'terminateds': np.ndarray((500,), dtype=bool, min=0.0, max=1.0, mean=0.008),
+[36m(RolloutWorker pid=1098)[0m                                           'truncateds': np.ndarray((500,), dtype=bool, min=0.0, max=0.0, mean=0.0),
+[36m(RolloutWorker pid=1098)[0m                                           'unroll_id': np.ndarray((500,), dtype=int64, min=1.0, max=9.0, mean=4.64),
+[36m(RolloutWorker pid=1098)[0m                                           'value_targets': np.ndarray((500,), dtype=float32, min=-5.983, max=-0.232, mean=-2.987),
+[36m(RolloutWorker pid=1098)[0m                                           'values_bootstrapped': np.ndarray((500,), dtype=float32, min=-3.711, max=0.0, mean=-2.919),
+[36m(RolloutWorker pid=1098)[0m                                           'vf_preds': np.ndarray((500,), dtype=float32, min=-3.794, max=-1.877, mean=-2.952)}},
+[36m(RolloutWorker pid=1098)[0m   'type': 'MultiAgentBatch'}
+2026-09-22 00:11:17,208	WARNING deprecation.py:50 -- DeprecationWarning: `ray.rllib.execution.train_ops.multi_gpu_train_one_step` has been deprecated. This will raise an error in the future!
+2026-09-22 00:11:20,530	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+[36m(RolloutWorker pid=1098)[0m [32m [repeated 2x across cluster][0m
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:11:20,532	INFO rollout_worker.py:688 -- Generating sample batch of size 1
+[36m(RolloutWorker pid=1098)[0m 2026-09-22 00:11:16,463	INFO harness_analytics.py:230 -- Episode 4: BestEpisodePerformance(max_unburned=994, sim_area=1024, num_sim_steps=13, episode=3, reward=-0.5)[32m [repeated 7x across cluster][0m
+2026-09-22 00:11:21,234	INFO algorithm.py:1107 -- Ran round 1 of non-parallel evaluation (1/1 episodes done)
+[36m(RolloutWorker pid=1325)[0m   'policy_batches': { 'default_policy': { 'advantages': np.ndarray((109,), dtype=float32, min=-2.222, max=2.532, mean=0.615),
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:11:21,218	INFO rollout_worker.py:730 -- Completed sample batch:
+[36m(RolloutWorker pid=1325)[0m { 'count': 109,
+[36m(RolloutWorker pid=1325)[0m                                           'agent_index': np.ndarray((109,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[36m(RolloutWorker pid=1325)[0m                                           'eps_id': np.ndarray((109,), dtype=int64, min=1.6699892787009098e+17, max=1.6699892787009098e+17, mean=1.66998927870091e+17),
+[36m(RolloutWorker pid=1325)[0m                                           'infos': np.ndarray((109,), dtype=object, head={}),
+[36m(RolloutWorker pid=1325)[0m                                           'new_obs': np.ndarray((109, 32, 32, 6), dtype=float32, min=0.0, max=1.0, mean=0.661),
+[36m(RolloutWorker pid=1325)[0m                                           'obs': np.ndarray((109, 32, 32, 6), dtype=float32, min=0.0, max=1.0, mean=0.661),
+[36m(RolloutWorker pid=1325)[0m                                           'rewards': np.ndarray((109,), dtype=float32, min=-1.25, max=0.0, mean=-0.074),
+[36m(RolloutWorker pid=1325)[0m                                           't': np.ndarray((109,), dtype=int64, min=0.0, max=108.0, mean=54.0),
+[36m(RolloutWorker pid=1325)[0m                                           'terminateds': np.ndarray((109,), dtype=bool, min=0.0, max=1.0, mean=0.009),
+[36m(RolloutWorker pid=1325)[0m                                           'truncateds': np.ndarray((109,), dtype=bool, min=0.0, max=0.0, mean=0.0),
+[36m(RolloutWorker pid=1325)[0m                                           'unroll_id': np.ndarray((109,), dtype=int64, min=1.0, max=1.0, mean=1.0),
+[36m(RolloutWorker pid=1325)[0m                                           'value_targets': np.ndarray((109,), dtype=float32, min=-6.009, max=0.0, mean=-2.364),
+[36m(RolloutWorker pid=1325)[0m                                           'values_bootstrapped': np.ndarray((109,), dtype=float32, min=-4.183, max=0.0, mean=-2.94),
+[36m(RolloutWorker pid=1325)[0m                                           'vf_preds': np.ndarray((109,), dtype=float32, min=-4.349, max=-2.416, mean=-2.98)}},
+[36m(RolloutWorker pid=1325)[0m   'type': 'MultiAgentBatch'}
+[36m(RolloutWorker pid=1325)[0m [32m [repeated 2x across cluster][0m
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:11:28,042	INFO harness_analytics.py:230 -- Episode 10: BestEpisodePerformance(max_unburned=998, sim_area=1024, num_sim_steps=13, episode=6, reward=-0.25)[32m [repeated 12x across cluster][0m
+2026-09-22 00:11:33,935	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+2026-09-22 00:11:34,488	INFO algorithm.py:1107 -- Ran round 1 of non-parallel evaluation (1/1 episodes done)
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:11:34,446	INFO harness_analytics.py:230 -- Episode 2: BestEpisodePerformance(max_unburned=988, sim_area=1024, num_sim_steps=13, episode=1, reward=0.0)[32m [repeated 8x across cluster][0m
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:11:41,374	INFO harness_analytics.py:230 -- Episode 19: BestEpisodePerformance(max_unburned=998, sim_area=1024, num_sim_steps=13, episode=6, reward=-0.25)[32m [repeated 11x across cluster][0m
+2026-09-22 00:11:47,263	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:11:47,755	INFO harness_analytics.py:230 -- Episode 3: BestEpisodePerformance(max_unburned=988, sim_area=1024, num_sim_steps=13, episode=1, reward=0.0)[32m [repeated 8x across cluster][0m
+2026-09-22 00:11:47,792	INFO algorithm.py:1107 -- Ran round 1 of non-parallel evaluation (1/1 episodes done)
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:11:54,410	INFO harness_analytics.py:230 -- Episode 28: BestEpisodePerformance(max_unburned=998, sim_area=1024, num_sim_steps=13, episode=6, reward=-0.25)[32m [repeated 11x across cluster][0m
+2026-09-22 00:12:00,403	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+2026-09-22 00:12:00,931	INFO algorithm.py:1107 -- Ran round 1 of non-parallel evaluation (1/1 episodes done)
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:12:00,892	INFO harness_analytics.py:230 -- Episode 4: BestEpisodePerformance(max_unburned=991, sim_area=1024, num_sim_steps=13, episode=4, reward=-0.75)[32m [repeated 10x across cluster][0m
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:12:07,765	INFO harness_analytics.py:230 -- Episode 37: BestEpisodePerformance(max_unburned=1000, sim_area=1024, num_sim_steps=13, episode=36, reward=-0.5)[32m [repeated 9x across cluster][0m
+2026-09-22 00:12:13,881	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+2026-09-22 00:12:14,423	INFO algorithm.py:1107 -- Ran round 1 of non-parallel evaluation (1/1 episodes done)
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:12:14,379	INFO harness_analytics.py:230 -- Episode 5: BestEpisodePerformance(max_unburned=991, sim_area=1024, num_sim_steps=13, episode=4, reward=-0.75)[32m [repeated 10x across cluster][0m
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:12:21,047	INFO harness_analytics.py:230 -- Episode 46: BestEpisodePerformance(max_unburned=1001, sim_area=1024, num_sim_steps=13, episode=46, reward=0.0)[32m [repeated 9x across cluster][0m
+2026-09-22 00:12:27,308	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+2026-09-22 00:12:27,836	INFO algorithm.py:1107 -- Ran round 1 of non-parallel evaluation (1/1 episodes done)
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:12:27,799	INFO harness_analytics.py:230 -- Episode 6: BestEpisodePerformance(max_unburned=993, sim_area=1024, num_sim_steps=13, episode=6, reward=0.0)[32m [repeated 10x across cluster][0m
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:12:34,868	INFO harness_analytics.py:230 -- Episode 56: BestEpisodePerformance(max_unburned=1003, sim_area=1024, num_sim_steps=13, episode=55, reward=-0.25)[32m [repeated 11x across cluster][0m
+2026-09-22 00:12:40,516	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:12:40,999	INFO harness_analytics.py:230 -- Episode 7: BestEpisodePerformance(max_unburned=993, sim_area=1024, num_sim_steps=13, episode=6, reward=0.0)[32m [repeated 8x across cluster][0m
+2026-09-22 00:12:41,046	INFO algorithm.py:1107 -- Ran round 1 of non-parallel evaluation (1/1 episodes done)
+[36m(RolloutWorker pid=1099)[0m 2026-09-22 00:12:47,906	INFO harness_analytics.py:230 -- Episode 65: BestEpisodePerformance(max_unburned=1003, sim_area=1024, num_sim_steps=13, episode=55, reward=-0.25)[32m [repeated 11x across cluster][0m
+2026-09-22 00:12:53,521	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+[36m(RolloutWorker pid=1325)[0m 2026-09-22 00:12:53,980	INFO harness_analytics.py:230 -- Episode 8: BestEpisodePerformance(max_unburned=993, sim_area=1024, num_sim_steps=13, episode=6, reward=0.0)[32m [repeated 8x across cluster][0m
+2026-09-22 00:12:54,023	INFO algorithm.py:1107 -- Ran round 1 of non-parallel evaluation (1/1 episodes done)
+2026-09-22 00:11:02,425	INFO main.py:313 -- Configuration files for this job can be found at /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_00-10-59/hydra_output.
+2026-09-22 00:11:02,429	INFO main.py:206 -- Instantiating environment settings (with partial conversion)...
+2026-09-22 00:11:02,463	INFO main.py:208 -- Instantiating evaluation settings (with partial conversion)...
+[36m(RolloutWorker pid=1098)[0m [09/22/2026 12:11:06 AM] INFO     Harness in evaluation mode:      harness.py:50
+[36m(RolloutWorker pid=1098)[0m                                   False                                         
+[36m(RolloutWorker pid=1325)[0m [09/22/2026 12:11:12 AM] INFO     Harness in evaluation mode: True harness.py:50
+[36m(RolloutWorker pid=1099)[0m [09/22/2026 12:11:06 AM] INFO     Harness in evaluation mode:      harness.py:50
+[36m(RolloutWorker pid=1099)[0m                                   False                                         
+2026-09-22 00:11:13,927	INFO main.py:322 -- Creating an algorithm instance from /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_00-05-26/checkpoints/checkpoint_0.
+2026-09-22 00:11:13,993	INFO main.py:329 -- Training model on simharness2.environments.DamageAwareReactiveHarness.
+2026-09-22 00:11:13,994	INFO main.py:154 -- Training iteration 0.
+2026-09-22 00:11:21,302	INFO main.py:162 -- An Algorithm checkpoint has been created inside directory: '/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_00-10-59/checkpoints/checkpoint_0'.
+2026-09-22 00:11:21,302	INFO main.py:154 -- Training iteration 1.
+2026-09-22 00:11:27,550	INFO main.py:154 -- Training iteration 2.
+2026-09-22 00:11:34,525	INFO main.py:154 -- Training iteration 3.
+2026-09-22 00:11:40,986	INFO main.py:154 -- Training iteration 4.
+2026-09-22 00:11:47,831	INFO main.py:154 -- Training iteration 5.
+2026-09-22 00:11:54,120	INFO main.py:162 -- An Algorithm checkpoint has been created inside directory: '/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_00-10-59/checkpoints/checkpoint_5'.
+2026-09-22 00:11:54,120	INFO main.py:154 -- Training iteration 6.
+2026-09-22 00:12:00,979	INFO main.py:154 -- Training iteration 7.
+2026-09-22 00:12:07,583	INFO main.py:154 -- Training iteration 8.
+2026-09-22 00:12:14,465	INFO main.py:154 -- Training iteration 9.
+2026-09-22 00:12:20,976	INFO main.py:154 -- Training iteration 10.
+2026-09-22 00:12:27,896	INFO main.py:162 -- An Algorithm checkpoint has been created inside directory: '/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_00-10-59/checkpoints/checkpoint_10'.
+2026-09-22 00:12:27,896	INFO main.py:154 -- Training iteration 11.
+2026-09-22 00:12:34,289	INFO main.py:154 -- Training iteration 12.
+2026-09-22 00:12:41,092	INFO main.py:154 -- Training iteration 13.
+2026-09-22 00:12:47,436	INFO main.py:154 -- Training iteration 14.
+2026-09-22 00:12:54,098	INFO main.py:178 -- The final model has been saved inside directory: /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_00-10-59/checkpoints/checkpoint_10.

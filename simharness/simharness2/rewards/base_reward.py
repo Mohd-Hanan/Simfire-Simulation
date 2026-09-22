@@ -245,10 +245,9 @@ class AreaSavedPropReward(BaseReward):
         agents: Dict[Any, ReactiveAgent],
         agent_speed: int,
     ) -> float:
-        """Basic Intermediate reward is the last sim step reward
-        modified by behavioral shaping components.
+        """Intermediate steps should return only the behavioral shaping reward for that action.
         """
-        reward = self.latest_reward
+        reward = 0.0
 
         for agent_id, agent in agents.items():
             # non-none action penalty

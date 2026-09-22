@@ -454,8 +454,8 @@ class ReactiveHarness(RLHarness):  # noqa: D205,D212,D415
             #update timesteps_copy to next time the simulation with the agent will update
             timesteps_copy = timesteps_copy + self.agent_speed
 
-           #update the size of self.bench_firemaps if this benchmark simulation has lasted longer than any previous benchmark simulations
-           if ((self.harness_analytics.benchmark_sim_analytics.num_sim_steps) - 1) > (self.max_bench_length - 1):
+            #update the size of self.bench_firemaps if this benchmark simulation has lasted longer than any previous benchmark simulations
+            if ((self.harness_analytics.benchmark_sim_analytics.num_sim_steps) - 1) > (self.max_bench_length - 1):
 
                 #append the bench fire map to the self.bench_firemaps
                 self.bench_firemaps.append(np.copy(self.benchmark_sim.fire_map))
@@ -463,8 +463,8 @@ class ReactiveHarness(RLHarness):  # noqa: D205,D212,D415
                 #update the max length of the benchsim when defining future lists for self.bench_firemaps
                 self.max_bench_length = self.max_bench_length + 1
 
-           #else store the bench fire map at the sim step
-           else:
+            #else store the bench fire map at the sim step
+            else:
                 self.bench_firemaps[(self.harness_analytics.benchmark_sim_analytics.num_sim_steps) - 1] = np.copy(self.benchmark_sim.fire_map)
 
     def _update_state(self):

@@ -1,0 +1,183 @@
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/pydantic/_internal/_config.py:386: UserWarning: Valid config keys have changed in V2:
+* 'allow_mutation' has been removed
+  warnings.warn(message, UserWarning)
+Authorization required, but no authorization protocol specified
+
+2026-09-22 11:10:30,184	INFO worker.py:1743 -- Started a local Ray instance. View the dashboard at [1m[32m127.0.0.1:8265 [39m[22m
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:164: UserWarning: [33mWARN: The obs returned by the `reset()` method was expecting numpy array dtype to be float32, actual type: float64[0m
+  logger.warn(
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:188: UserWarning: [33mWARN: The obs returned by the `reset()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+2026-09-22 11:10:31,245	WARNING deprecation.py:50 -- DeprecationWarning: `ignore_worker_failures is deprecated, and will soon be a no-op` has been deprecated. This will raise an error in the future!
+2026-09-22 11:10:31,245	WARNING deprecation.py:50 -- DeprecationWarning: `AlgorithmConfig.rollouts(recreate_failed_workers=..)` has been deprecated. Use `AlgorithmConfig.fault_tolerance(recreate_failed_workers=..)` instead. This will raise an error in the future!
+2026-09-22 11:10:31,245	WARNING deprecation.py:50 -- DeprecationWarning: `AlgorithmConfig.rollouts(restart_failed_sub_environments=..)` has been deprecated. Use `AlgorithmConfig.fault_tolerance(restart_failed_sub_environments=..)` instead. This will raise an error in the future!
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/rllib/utils/from_config.py:197: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+`UnifiedLogger` will be removed in Ray 2.7.
+  object_ = constructor(*ctor_args, **ctor_kwargs)
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `JsonLogger interface is deprecated in favor of the `ray.tune.json.JsonLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `CSVLogger interface is deprecated in favor of the `ray.tune.csv.CSVLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `TBXLogger interface is deprecated in favor of the `ray.tune.tensorboardx.TBXLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+Authorization required, but no authorization protocol specified
+
+2026-09-22 11:10:31,398	WARNING env.py:162 -- Your env doesn't have a .spec.max_episode_steps attribute. Your horizon will default to infinity, and your environment will not be reset.
+2026-09-22 11:10:31,474	INFO policy.py:1272 -- Policy (worker=local) running on CPU.
+2026-09-22 11:10:31,474	INFO torch_policy_v2.py:111 -- Found 1 visible cuda devices.
+2026-09-22 11:10:32,487	INFO util.py:118 -- Using connectors:
+2026-09-22 11:10:32,487	INFO util.py:119 --     AgentConnectorPipeline
+        ObsPreprocessorConnector
+        StateBufferConnector
+        ViewRequirementAgentConnector
+2026-09-22 11:10:32,487	INFO util.py:120 --     ActionConnectorPipeline
+        ConvertToNumpyConnector
+        NormalizeActionsConnector
+        ImmutableActionsConnector
+2026-09-22 11:10:32,487	INFO rollout_worker.py:1758 -- Built policy map: <PolicyMap lru-caching-capacity=100 policy-IDs=['default_policy']>
+2026-09-22 11:10:32,487	INFO rollout_worker.py:1759 -- Built preprocessor map: {'default_policy': None}
+2026-09-22 11:10:32,487	INFO rollout_worker.py:560 -- Built filter map: defaultdict(<class 'ray.rllib.utils.filter.NoFilter'>, {})
+/home/hari/miniconda3/envs/simfire_env/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-09-22 11:10:32,636	INFO policy.py:1272 -- Policy (worker=local) running on CPU.
+2026-09-22 11:10:32,637	INFO torch_policy_v2.py:111 -- Found 1 visible cuda devices.
+2026-09-22 11:10:32,645	INFO util.py:118 -- Using connectors:
+2026-09-22 11:10:32,645	INFO util.py:119 --     AgentConnectorPipeline
+        ObsPreprocessorConnector
+        StateBufferConnector
+        ViewRequirementAgentConnector
+2026-09-22 11:10:32,645	INFO util.py:120 --     ActionConnectorPipeline
+        ConvertToNumpyConnector
+        NormalizeActionsConnector
+        ImmutableActionsConnector
+2026-09-22 11:10:32,645	INFO rollout_worker.py:1758 -- Built policy map: <PolicyMap lru-caching-capacity=100 policy-IDs=['default_policy']>
+2026-09-22 11:10:32,645	INFO rollout_worker.py:1759 -- Built preprocessor map: {'default_policy': None}
+2026-09-22 11:10:32,645	INFO rollout_worker.py:560 -- Built filter map: defaultdict(<class 'ray.rllib.utils.filter.NoFilter'>, {})
+2026-09-22 11:10:32,646	WARNING util.py:62 -- Install gputil for GPU system monitoring.
+2026-09-22 11:10:32,690	INFO trainable.py:575 -- Restored on 127.0.0.1 from checkpoint: Checkpoint(filesystem=local, path=/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_08-03-58/checkpoints/checkpoint_1200)
+2026-09-22 11:10:32,691	INFO algorithm.py:996 -- Evaluating current state of PPO for 1 episodes.
+2026-09-22 11:10:32,691	INFO rollout_worker.py:688 -- Generating sample batch of size 1
+2026-09-22 11:10:36,270	INFO harness_analytics.py:230 -- Episode 1: BestEpisodePerformance(max_unburned=979, sim_area=1024, num_sim_steps=13, episode=1, reward=-0.5)
+2026-09-22 11:10:36,294	INFO simulation_analytics.py:144 -- Saving episode history to /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_11-10-28/evaluation/sim_data/iter_0_time_111036_w_0_v_0.csv...
+2026-09-22 11:10:36,296	INFO simulation_analytics.py:144 -- Saving episode history to /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_11-10-28/evaluation/benchsim_data/iter_0_time_111036_w_0_v_0.csv...
+2026-09-22 11:10:37,680	INFO rollout_worker.py:730 -- Completed sample batch:
+
+{ 'count': 109,
+  'policy_batches': { 'default_policy': { 'advantages': np.ndarray((109,), dtype=float32, min=-2.096, max=1.321, mean=-0.385),
+                                          'agent_index': np.ndarray((109,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+                                          'eps_id': np.ndarray((109,), dtype=int64, min=5.7192349080360024e+16, max=5.7192349080360024e+16, mean=5.7192349080360024e+16),
+                                          'infos': np.ndarray((109,), dtype=object, head={}),
+                                          'new_obs': np.ndarray((109, 32, 32, 6), dtype=float32, min=0.0, max=1.0, mean=0.661),
+                                          'obs': np.ndarray((109, 32, 32, 6), dtype=float32, min=0.0, max=1.0, mean=0.661),
+                                          'rewards': np.ndarray((109,), dtype=float32, min=-1.5, max=0.0, mean=-0.094),
+                                          't': np.ndarray((109,), dtype=int64, min=0.0, max=108.0, mean=54.0),
+                                          'terminateds': np.ndarray((109,), dtype=bool, min=0.0, max=1.0, mean=0.009),
+                                          'truncateds': np.ndarray((109,), dtype=bool, min=0.0, max=0.0, mean=0.0),
+                                          'unroll_id': np.ndarray((109,), dtype=int64, min=1.0, max=1.0, mean=1.0),
+                                          'value_targets': np.ndarray((109,), dtype=float32, min=-6.734, max=-0.463, mean=-3.826),
+                                          'values_bootstrapped': np.ndarray((109,), dtype=float32, min=-5.097, max=0.0, mean=-3.394),
+                                          'vf_preds': np.ndarray((109,), dtype=float32, min=-5.189, max=-1.427, mean=-3.441)}},
+  'type': 'MultiAgentBatch'}
+
+2026-09-22 11:10:31,142	INFO main.py:313 -- Configuration files for this job can be found at /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_11-10-28/hydra_output.
+2026-09-22 11:10:31,146	INFO main.py:206 -- Instantiating environment settings (with partial conversion)...
+2026-09-22 11:10:31,174	INFO main.py:208 -- Instantiating evaluation settings (with partial conversion)...
+2026-09-22 11:10:31,344	INFO harness.py:50 -- Harness in evaluation mode: False
+2026-09-22 11:10:32,541	INFO harness.py:50 -- Harness in evaluation mode: True
+2026-09-22 11:10:32,646	INFO main.py:335 -- Creating an algorithm instance from /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_08-03-58/checkpoints/checkpoint_1200.
+2026-09-22 11:10:32,690	INFO main.py:341 -- Evaluating model on simharness2.environments.DamageAwareReactiveHarness.
+2026-09-22 11:10:32,691	INFO render_env.py:279 -- Incrementing evaluation iterations...
+2026-09-22 11:10:32,691	INFO harness.py:129 -- Setting initial value of `self.num_eval_iters` to -1.
+2026-09-22 11:10:32,691	INFO render_env.py:288 -- Current evaluation iteration set to: 0
+2026-09-22 11:10:32,704	INFO render_env.py:154 -- Current evaluation iteration: 0
+2026-09-22 11:10:32,704	INFO render_env.py:129 -- Preparing to render evaluation environment (w: 0, v: 0)...
+2026-09-22 11:10:32,704	INFO fire_harness.py:581 -- Updating the `self.sim.config` with new `Config` object...
+2026-09-22 11:10:32,750	INFO fire_harness.py:585 -- Resetting `self.sim` to configure rendering == True.
+2026-09-22 11:10:36,280	INFO render_env.py:237 -- Total environment steps: 109
+2026-09-22 11:10:36,280	INFO render_env.py:238 -- Saving GIF to /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_11-10-28/evaluation/gifs/functional/fire_init_pos_x_16_y_16/iter_0_time_111036_w_0_v_0.gif...
+2026-09-22 11:10:36,280	INFO simulation.py:852 -- Creating directory '/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_11-10-28/evaluation/gifs/functional/fire_init_pos_x_16_y_16'
+2026-09-22 11:10:36,280	INFO simulation.py:855 -- Saving GIF to '/home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_11-10-28/evaluation/gifs/functional/fire_init_pos_x_16_y_16/iter_0_time_111036_w_0_v_0.gif'...
+2026-09-22 11:10:36,293	INFO simulation.py:860 -- Finished saving GIF
+2026-09-22 11:10:36,297	INFO fire_harness.py:581 -- Updating the `self.sim.config` with new `Config` object...
+2026-09-22 11:10:36,343	INFO fire_harness.py:585 -- Resetting `self.sim` to configure rendering == False.
+2026-09-22 11:10:36,344	INFO render_env.py:154 -- Current evaluation iteration: 0
+2026-09-22 11:10:36,344	INFO render_env.py:129 -- Preparing to render evaluation environment (w: 0, v: 0)...
+2026-09-22 11:10:36,344	INFO fire_harness.py:581 -- Updating the `self.sim.config` with new `Config` object...
+2026-09-22 11:10:36,595	INFO fire_harness.py:585 -- Resetting `self.sim` to configure rendering == True.
+2026-09-22 11:10:37,695	INFO main.py:140 -- evaluation:
+  connector_metrics:
+    ObsPreprocessorConnector_ms: 0.014209747314453125
+    StateBufferConnector_ms: 0.00553131103515625
+    ViewRequirementAgentConnector_ms: 0.12772083282470703
+  custom_metrics: {}
+  episode_len_mean: 109.0
+  episode_media:
+    gif_data:
+    - context:
+        fire_initial_position: (16, 16)
+      name: functional
+      path: /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_11-10-28/evaluation/gifs/functional/fire_init_pos_x_16_y_16/iter_0_time_111036_w_0_v_0.gif
+      step: 0
+  episode_reward_max: -10.261299999999991
+  episode_reward_mean: -10.261299999999991
+  episode_reward_min: -10.261299999999991
+  episodes_this_iter: 1
+  hist_stats:
+    episode_lengths:
+    - 109
+    episode_reward:
+    - -10.261299999999991
+  num_agent_steps_sampled_this_iter: 109
+  num_env_steps_sampled_this_iter: 109
+  num_faulty_episodes: 0
+  policy_reward_max: {}
+  policy_reward_mean: {}
+  policy_reward_min: {}
+  sampler_perf:
+    mean_action_processing_ms: 0.13006383722478695
+    mean_env_render_ms: 0.0
+    mean_env_wait_ms: 26.406576416709207
+    mean_inference_ms: 2.319710904901678
+    mean_raw_obs_processing_ms: 16.432066397233445
+  sampler_results:
+    connector_metrics:
+      ObsPreprocessorConnector_ms: 0.014209747314453125
+      StateBufferConnector_ms: 0.00553131103515625
+      ViewRequirementAgentConnector_ms: 0.12772083282470703
+    custom_metrics: {}
+    episode_len_mean: 109.0
+    episode_media:
+      gif_data:
+      - context:
+          fire_initial_position: (16, 16)
+        name: functional
+        path: /home/hari/PycharmProjects/Simfire-Simulation/simharness_data/simharness/experiments/2026-09-22_11-10-28/evaluation/gifs/functional/fire_init_pos_x_16_y_16/iter_0_time_111036_w_0_v_0.gif
+        step: 0
+    episode_reward_max: -10.261299999999991
+    episode_reward_mean: -10.261299999999991
+    episode_reward_min: -10.261299999999991
+    episodes_this_iter: 1
+    hist_stats:
+      episode_lengths:
+      - 109
+      episode_reward:
+      - -10.261299999999991
+    num_faulty_episodes: 0
+    policy_reward_max: {}
+    policy_reward_mean: {}
+    policy_reward_min: {}
+    sampler_perf:
+      mean_action_processing_ms: 0.13006383722478695
+      mean_env_render_ms: 0.0
+      mean_env_wait_ms: 26.406576416709207
+      mean_inference_ms: 2.319710904901678
+      mean_raw_obs_processing_ms: 16.432066397233445
+  timesteps_this_iter: 109
+

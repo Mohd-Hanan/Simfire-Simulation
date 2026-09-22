@@ -66,10 +66,10 @@ fire:
         _target_: builtins.tuple
         # NOTE: This will initialize the fire at the top left corner of screen
         _args_: [[
-          122, # x position
-          122 # y position
+          16, # x position
+          16 # y position
         ]]
-  max_fire_duration: 10
+  max_fire_duration: 100
   diagonal_spread: true
 
 environment:
